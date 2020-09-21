@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>strukturiertes Memory</title>
-  <link href="memory.css" rel="stylesheet" />
-  <script src="memory.js"></script>
+  <link href="./css/memory.css" rel="stylesheet" />
+  <script src="./js/stoppUhr.js"></script>
+  <script src="./js/memory.js"></script>
 </head>
 <body>
   <section id="memoryspielfeld">
+    <section id="eingabeausgabe"><input id="txtZeitausgabe"/></form></section>
     <img src="bilder/DeckBlatt.gif" onclick="klickAufBild(this, 0);" />
     <img src="bilder/DeckBlatt.gif" onclick="klickAufBild(this, 1);" />
     <img src="bilder/DeckBlatt.gif" onclick="klickAufBild(this, 2);" />
@@ -18,5 +20,10 @@
     <img src="bilder/DeckBlatt.gif" onclick="klickAufBild(this, 6);" />
     <img src="bilder/DeckBlatt.gif" onclick="klickAufBild(this, 7);" />
   </section>
+  <script>starteZeit(document.getElementById('txtZeitausgabe'),2);</script>
+  <button onclick="starteZeit(document.getElementById('txtZeitausgabe'),2);">Start</button>
+  <button onclick="wartenZeit();">Pause</button>
+  <button onclick="weiterZeit();">Weiter</button>
+  <button onclick="beendeZeit();">Stopp</button>
 </body>
 </html>
